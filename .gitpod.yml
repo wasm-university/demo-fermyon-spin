@@ -35,13 +35,6 @@ tasks:
 #      clear
 #      bat TODO.md
 
-  - name: 00-zellij
-    command: |
-      clear
-      SHELL="/bin/bash" zellij
-
-
-
 ports:
   - port: 8080
     visibility: public

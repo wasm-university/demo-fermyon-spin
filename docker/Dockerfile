@@ -9,7 +9,6 @@ RUN brew install httpie && \
     brew install bat && \
     brew install exa && \
     brew install hey && \
-    brew install zellij && \
     brew install pv
 
 # ------------------------------------
@@ -28,6 +27,26 @@ RUN rustup toolchain uninstall stable-x86_64-unknown-linux-gnu && \
     curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh && \
     rustup target add wasm32-wasi
 
+# ------------------------------------
+# Install Grain support
+# ------------------------------------
+ARG GRAIN_VERSION="0.5.3"
+
+RUN sudo curl -L --output /usr/local/bin/grain \
+https://github.com/grain-lang/grain/releases/download/grain-v${GRAIN_VERSION}/grain-linux-x64 \
+&& sudo chmod +x /usr/local/bin/grain
+
+# ------------------------------------
+# Install Wagi (Deislab)
+# ------------------------------------
+ARG WAGI_VERSION="0.8.1"
+RUN mkdir tmp-wagi && \
+    cd tmp-wagi && \
+    wget https://github.com/deislabs/wagi/releases/download/v${WAGI_VERSION}/wagi-v${WAGI_VERSION}-linux-amd64.tar.gz && \
+    tar -zxf wagi-v${WAGI_VERSION}-linux-amd64.tar.gz && \
+    sudo cp wagi /usr/local/bin/wagi && \
+    cd .. && \
+    rm -rf tmp-wagi
 
 # ------------------------------------
 # Install Spin (Fermyon)
@@ -65,3 +84,19 @@ RUN curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/i
     curl https://get.wasmer.io -sSfL | sh && \
     curl https://wasmtime.dev/install.sh -sSf | bash
 
+# ------------------------------------
+# Install Subo
+# ------------------------------------
+
+RUN brew tap suborbital/subo && \
+    brew install subo
+
+# ------------------------------------
+# Install Sat (Suborbital)
+# ------------------------------------
+RUN git clone --depth=1 https://github.com/suborbital/sat.git && \
+    cd sat && \
+    go build -o .bin/sat -tags netgo,wasmtime . && \
+    sudo cp .bin/sat /usr/local/bin/sat && \
+    cd .. && \
+    rm -rf sat
