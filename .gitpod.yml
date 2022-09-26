@@ -1,4 +1,4 @@
-image: k33g/demo-fermyon-spin:0.0.1
+image: k33g/wasm-wasi-tools:0.0.0
 
 tasks:
   - name: initialize
@@ -21,7 +21,6 @@ tasks:
 
     init: |
       echo "🚀 initialize"
-      npm install
       clear
       export DOTNET_ROOT=$HOME/dotnet
       export PATH=$PATH:$HOME/dotnet
