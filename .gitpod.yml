@@ -1,4 +1,4 @@
-image: k33g/wasm-wasi-tools:0.0.0
+image: k33g/wasm-wasi-tools:0.0.1
 
 tasks:
   - name: initialize
@@ -27,6 +27,10 @@ tasks:
       #dotnet workload install wasm-tools
       #dotnet add package Wasi.Sdk --prerelease
       dotnet --version
+      SWIFT_VERSION="5.7.0"
+      export SWIFT_ROOT=$HOME/swift-wasm-${SWIFT_VERSION}-RELEASE
+      export PATH=$SWIFT_ROOT/usr/bin:"${PATH}"
+
 
 #  - name: nn-my-term
 #    command: |

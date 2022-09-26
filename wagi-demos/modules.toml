@@ -1,0 +1,7 @@
+[[module]]
+module = "./hello-go/hello.wasm"
+route = "/hello"
+
+#[[module]]
+#module = "./hey/main.wasm"
+#route = "/hey"
