@@ -27,9 +27,16 @@ tasks:
       #dotnet workload install wasm-tools
       #dotnet add package Wasi.Sdk --prerelease
       dotnet --version
-      SWIFT_VERSION="5.7.0"
-      export SWIFT_ROOT=$HOME/swift-wasm-${SWIFT_VERSION}-RELEASE
-      export PATH=$SWIFT_ROOT/usr/bin:"${PATH}"
+      #SWIFT_VERSION="5.7.0"
+      #export SWIFT_ROOT=$HOME/swift-wasm-${SWIFT_VERSION}-RELEASE
+      #export PATH=$SWIFT_ROOT/usr/bin:"${PATH}"
+      #swiftc --version
+      # TODO: add it to .bashrc (or check Dockerfile)
+      echo "SWIFT_VERSION=\"5.7.0\""  >> $HOME/.bashrc
+      echo "export SWIFT_ROOT=\$HOME/swift-wasm-\${SWIFT_VERSION}-RELEASE"  >> $HOME/.bashrc
+      echo "export PATH=$SWIFT_ROOT/usr/bin:\"${PATH}\""  >> $HOME/.bashrc
+      source $HOME/.bashrc
+      swiftc --version
 
 
 #  - name: nn-my-term
