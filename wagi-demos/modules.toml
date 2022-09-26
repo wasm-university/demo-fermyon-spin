@@ -1,7 +1,7 @@
 [[module]]
 module = "./hello-go/hello.wasm"
-route = "/hello"
+route = "/hello-go"
 
-#[[module]]
-#module = "./hey/main.wasm"
-#route = "/hey"
+[[module]]
+module = "./hello-swift/hello.wasm"
+route = "/hello-swift"

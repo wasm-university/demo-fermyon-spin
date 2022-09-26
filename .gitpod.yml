@@ -1,4 +1,4 @@
-image: k33g/wasm-wasi-tools:0.0.1
+image: k33g/wasm-wasi-tools:0.0.2
 
 tasks:
   - name: initialize
@@ -32,7 +32,7 @@ tasks:
       #export PATH=$SWIFT_ROOT/usr/bin:"${PATH}"
       #swiftc --version
       # TODO: add it to .bashrc (or check Dockerfile)
-      echo "SWIFT_VERSION=\"5.7.0\""  >> $HOME/.bashrc
+      echo "SWIFT_VERSION=\"5.6.0\""  >> $HOME/.bashrc
       echo "export SWIFT_ROOT=\$HOME/swift-wasm-\${SWIFT_VERSION}-RELEASE"  >> $HOME/.bashrc
       echo "export PATH=\$SWIFT_ROOT/usr/bin:\"\${PATH}\""  >> $HOME/.bashrc
       source $HOME/.bashrc
