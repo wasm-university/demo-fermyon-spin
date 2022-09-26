@@ -35,10 +35,10 @@ tasks:
 #      clear
 #      bat TODO.md
 
-  - name: nn-my-term
+  - name: 00-zellij
     command: |
       clear
-      zellij
+      SHELL="/bin/bash" zellij
 
 
 
