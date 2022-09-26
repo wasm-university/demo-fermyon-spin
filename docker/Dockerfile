@@ -9,6 +9,7 @@ RUN brew install httpie && \
     brew install bat && \
     brew install exa && \
     brew install hey && \
+    brew install zellij && \
     brew install pv
 
 # ------------------------------------
@@ -37,6 +38,9 @@ RUN wget https://github.com/fermyon/spin/releases/download/v${SPIN_VERSION}/spin
     tar xfv spin-v${SPIN_VERSION}-linux-amd64.tar.gz && \
     sudo cp spin /usr/local/bin/spin && \
     rm spin; rm readme.md; rm LICENSE; rm spin-v${SPIN_VERSION}-linux-amd64.tar.gz
+
+RUN spin templates install --git https://github.com/fermyon/spin
+RUN spin templates install --git https://github.com/fermyon/spin-dotnet-sdk --branch main --update
 
 # ------------------------------------
 # Install Dot.NEt Core Preview
