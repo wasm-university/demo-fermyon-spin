@@ -1,4 +1,4 @@
-module github.com/go_hello_world
+module spin_go_hello_world
 
 go 1.17
 
