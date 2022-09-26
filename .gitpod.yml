@@ -35,6 +35,12 @@ tasks:
 #      clear
 #      bat TODO.md
 
+  - name: nn-my-term
+    command: |
+      clear
+      zellij
+
+
 
 ports:
   - port: 8080
