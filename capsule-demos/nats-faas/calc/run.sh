@@ -1,6 +1,7 @@
 #!/bin/bash
 capsule \
-   -wasm=./nats-subscriber.wasm \
+   -wasm=./calc.wasm \
    -mode=nats \
    -natssrv=localhost:4222 \
-   -subject=maths
+   -subject=faas
+   

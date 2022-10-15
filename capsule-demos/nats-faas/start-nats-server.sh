@@ -1,5 +1,5 @@
 #!/bin/bash
-nats-server --jetstream
 #nohup nats-server --jetstream &
+nats-server --jetstream
 
 
