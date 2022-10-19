@@ -1,2 +1,11 @@
 #!/bin/bash
-spin up
+########################
+# include the magic
+########################
+. ../../demo-magic.sh
+
+# hide the evidence
+clear
+
+# Put your stuff here
+pei "spin up"

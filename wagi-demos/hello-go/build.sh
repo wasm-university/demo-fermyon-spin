@@ -1,4 +1,12 @@
 #!/bin/bash
-tinygo build -o hello.wasm -target wasi ./hello.go
+########################
+# include the magic
+########################
+. ../../demo-magic.sh
 
-ls -lh *.wasm
+# hide the evidence
+clear
+
+# Put your stuff here
+pei "tinygo build -o hello.wasm -target wasi ./hello.go"
+pei "ls -lh *.wasm"

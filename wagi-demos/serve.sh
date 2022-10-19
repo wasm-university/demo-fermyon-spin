@@ -1,2 +1,13 @@
 #!/bin/bash
-wagi -c modules.toml
+########################
+# include the magic
+########################
+. ../demo-magic.sh
+
+# hide the evidence
+clear
+
+# Put your stuff here
+pei "wagi -c modules.toml"
+
+

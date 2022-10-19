@@ -1,4 +1,14 @@
 #!/bin/bash
-swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm
+########################
+# include the magic
+########################
+. ../../demo-magic.sh
 
-ls -lh *.wasm
+# hide the evidence
+clear
+
+# Put your stuff here
+pei "swiftc -target wasm32-unknown-wasi hello.swift -o hello.wasm"
+pei "ls -lh *.wasm"
+
+
