@@ -16,7 +16,7 @@ func main() {
   fmt.Println("Route and QueryString:", args)
 	fmt.Println(argsWithoutCaller)
 
-  // get the body content
+  // get the body content (for POST request)
 	var reader = bufio.NewReader(os.Stdin)
 	message, _ := reader.ReadString('\n')
 

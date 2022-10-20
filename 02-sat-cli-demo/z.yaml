@@ -9,5 +9,5 @@ tabs:
           - direction: Vertical
             run:
               command: {cmd: node, args: ["hello.js"]}
-      - direction: Horizontal
+#      - direction: Horizontal
 

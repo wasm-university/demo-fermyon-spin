@@ -8,7 +8,7 @@
 clear
 
 # Put your stuff here
-pei "curl -i localhost:3000/hello-swift"
-echo ""
-pei "curl -i localhost:3000/hello-go?name=bob -d \"😀 Hello there\""
-echo ""
+echo "open http://127.0.0.1:8080/worker"
+pei "cd worker; wws ."
+
+

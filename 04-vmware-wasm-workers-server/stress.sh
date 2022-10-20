@@ -1,4 +1,4 @@
 #!/bin/bash
-hey -n 10 -c 10 -m GET \
+hey -n 1000 -c 50 -m GET \
 -H "Content-Type: application/json" \
 "http://localhost:8080/worker"

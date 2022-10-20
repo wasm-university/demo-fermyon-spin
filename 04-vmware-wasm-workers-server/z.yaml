@@ -1,0 +1,11 @@
+---
+tabs:
+  - direction: Vertical
+    name: "WAGI Demo"
+    parts:
+      - direction: Horizontal
+        parts:
+          - direction: Vertical
+          - direction: Vertical
+#      - direction: Horizontal
+
