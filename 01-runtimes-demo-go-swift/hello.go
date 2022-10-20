@@ -14,6 +14,8 @@ func four(number float32) float32 {
 func hello(name string) {
   fmt.Println("👋 hello", name)
 }
+// WebAssembly Interface Types
+// https://github.com/bytecodealliance/wasmtime/blob/main/docs/wasm-rust.md
 
 func main() {
 
