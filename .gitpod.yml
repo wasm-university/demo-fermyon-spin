@@ -37,6 +37,9 @@ tasks:
       echo "export PATH=\$SWIFT_ROOT/usr/bin:\"\${PATH}\""  >> $HOME/.bashrc
       source $HOME/.bashrc
       swiftc --version
+      cd 02-sat-cli-demos
+      go get -u ./...
+      cd ..
 
 
 #  - name: nn-my-term
@@ -44,7 +47,6 @@ tasks:
 #      cd 00-c-web
 #      clear
 #      bat TODO.md
-
 ports:
   - port: 8080
     visibility: public
@@ -57,8 +59,8 @@ vscode:
   extensions:
     - golang.go
     - pkief.material-icon-theme
-    - rust-lang.rust
     - bungcip.better-toml
     - aaron-bond.better-comments
     - grain-lang.vscode-grain
     - ms-dotnettools.vscode-dotnet-runtime
+    - matklad.rust-analyzer
