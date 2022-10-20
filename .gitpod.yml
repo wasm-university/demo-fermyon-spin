@@ -40,6 +40,7 @@ tasks:
       cd 02-sat-cli-demos
       go get -u ./...
       cd ..
+      clear
 
 
 #  - name: nn-my-term
